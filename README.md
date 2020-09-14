@@ -1,1 +1,5 @@
-# uniswap-sdk
+Install dependencies
+
+```sh
+yarn install
+```
