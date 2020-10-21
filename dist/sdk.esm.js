@@ -39,8 +39,8 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0x782536Abe989570211419352FbBf98A083380217';
-var INIT_CODE_HASH = '0x0c38c6d31daab568a53d971d852b15cce50d994cda2f4e2cde62195e79592f05';
+var FACTORY_ADDRESS = '0xEFCef5051dC82d090953b6b500EC046B019fc6E5';
+var INIT_CODE_HASH = '0x9e1259faa5ca3d8a31eb904b3caa7e3eb9793d23d453fc58e7c1fc7dd6c39a49';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -762,7 +762,7 @@ var Pair = /*#__PURE__*/function () {
   function Pair(tokenAmountA, tokenAmountB) {
     var tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
     ? [tokenAmountA, tokenAmountB] : [tokenAmountB, tokenAmountA];
-    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'STM-N', 'STM Network');
+    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'NOVA-N', 'NOVA Network');
     this.tokenAmounts = tokenAmounts;
   }
 
